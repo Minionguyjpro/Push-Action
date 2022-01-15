@@ -2,5 +2,5 @@ name: 'Push-Action'
 description: 'Push changes directly in a GitHub action!'
 author: 'Minionguyjpro'
 branding:
-  icon: ''
-  color: 'yellow'
+  icon: 'arrow-up-circle'
+  color: 'red'
