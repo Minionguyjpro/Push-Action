@@ -1,0 +1,6 @@
+name: 'Push-Action'
+description: 'Push changes directly in a GitHub action!'
+author: 'Minionguyjpro'
+branding:
+  icon: 'archive'
+  color: 'yellow'
