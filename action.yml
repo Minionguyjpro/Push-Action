@@ -5,6 +5,9 @@ branding:
   icon: 'arrow-up-circle'
   color: 'red'
 inputs:
+ username:
+   required: true
+   description: "GitHub Username"
 runs:
   using: composite
   steps:
@@ -15,4 +18,4 @@ runs:
           git add -A
           git commit -am "Made new build"
           git push    
-    
+      shell: powershell
