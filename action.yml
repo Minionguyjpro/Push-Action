@@ -5,17 +5,22 @@ branding:
   icon: 'arrow-up-circle'
   color: 'red'
 inputs:
- username:
-   required: true
-   description: "GitHub Username"
+  user:
+    description: 'The user/contributor to set as committer'
+    required: true
+    default: '$Env:GITHUB_ACTOR'
+  push-msg:
+    description: 'The commit/push message to use for the push'
+    required: true
+    default: 'Pushed new changes'
 runs:
   using: composite
   steps:
     - name: Commit and push changes
       run: |
-          git config --global user.name 'Minionguyjpro'
-          git config --global user.email 'minionguyjpro@users.noreply.github.com'
+          git config --global user.name '${{ inputs.user }}'
+          git config --global user.email '${{ inputs.user }}@users.noreply.github.com'
           git add -A
-          git commit -am "Made new build"
+          git commit -am "${{ inputs.push-msg }}"
           git push    
-      shell: powershell
+      shell: pwsh
